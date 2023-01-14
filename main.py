@@ -1,14 +1,14 @@
-from tkinter import *
-import pandas
 import random
+from tkinter import *
 
+import pandas
 
 BACKGROUND_COLOR = "#B1DDC6"
 current_card = {}
 to_learn = {}
 
 try:
-    data = pandas.read_csv("data/words_to_learn.csv", encoding="latin-1")
+    data = pandas.read_csv("data/Port.csv", encoding='latin-1')
 except FileNotFoundError:
     original_data = pandas.read_csv("data/Port.csv")
     to_learn = original_data.to_dict(orient="records")
